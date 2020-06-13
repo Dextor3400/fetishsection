@@ -138,6 +138,8 @@
                                                             </form>
                                                             <!--EDIT TOGGLER-->
                                                             <a class="edit-toggler btn btn-primary ml-1 mb-1" role='button' type="button" data-toggle="collapse" data-target="#edit{{ $comment->id }}">Edit</a>
+                                                            @else
+
                                                             @endif
                                                             <!--REPLY TOGGLER-->
                                                             <a class="reply-toggler btn btn-primary ml-1 mb-1" role='button' type="button" data-toggle="collapse" data-target="#reply{{ $comment->id }}">Reply</a>
