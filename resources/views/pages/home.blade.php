@@ -79,7 +79,9 @@
                             <input class="form-check-input" type="checkbox">
                             <label class="form-check-label" for="remember">Remember me</label>
                         </div>
-                        <button class="btn btn-success" href="{{ route('login') }}" type="submit">{{ __('Login') }}</button>
+                        <form action="{{ route('login') }}" method="POST">
+                            <button class="btn btn-success" href="{{ route('login') }}" type="submit">{{ __('Login') }}</button>
+                        </form>
                         <a class="btn btn-success" href="{{ route('register') }}">{{ __('Register') }}</a>
                     </div>
                 </div>

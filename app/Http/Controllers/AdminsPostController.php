@@ -46,7 +46,7 @@ class AdminsPostController extends Controller
         if ($file =  $request->file('post_image')) {
          $inputs['post_image'] = $file->getClientOriginalName();
          $file->move(public_path('images'), $inputs['post_image']);
-         $post->post_image = $inputs['post_image'];
+         $request->post_image = $inputs['post_image'];
         }
 
         auth()->user()->posts()->create($inputs);
