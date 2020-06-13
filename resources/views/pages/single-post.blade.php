@@ -28,7 +28,7 @@
             @endif
             <section class="col-12 col-lg-10 col-xl-10">
                 <div class="row bootstrap snippets">
-                    <div class="comment-wrapper">
+                    <div class="comment-wrapper col-12 col-lg-10 col-xl-10">
                         <div class="panel panel-info">
                             <div class="">
                                 <form action="{{route('comments.store')}}" method="post">
