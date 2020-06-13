@@ -5,7 +5,7 @@
             <section class="col-12 my-5">
                 <article class="row my-4 pb-4 text-center text-lg-left border-bottom border-light">
                     <div class="col-12 col-lg-6 col-xl-5">
-                        <img src="{{ $post->post_image }}" alt="user-image" class="img-fluid" alt="post-image">
+                        <img src="{{ $post->post_image }}" class="img-fluid" alt="post-image">
                     </div>
                     <div class="col-12 col-lg-6 col-xl-7">
                         <small>{{ $post->created_at->diffForHumans() }}</small>
@@ -200,6 +200,8 @@
                                                             </form>
                                                             <!--EDIT TOGGLER-->
                                                             <a class="reply-edit-toggler btn btn-primary ml-1 mb-1" role='button' type="button" data-toggle="collapse" data-target="#editreply{{ $reply->id }}">Edit</a>
+                                                            @else
+
                                                             @endif
                                                         </div>
                                                     <!--EDIT TOGGLE-->

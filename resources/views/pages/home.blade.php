@@ -66,23 +66,21 @@
                 <div class="row card ml-auto mr-1 mt-3">
                     <div class="card-header">Login</div>
                     <div class="card-body">
-                        <form method="POST" action="">
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input class="form-control" type="email" type="email" name="email">
-                                <small class="form-text text-muted" id="emailHelp">We'll never share your email with anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input class="form-control" type="password" type="password" name="password">
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox">
-                                <label class="form-check-label" for="remember">Remember me</label>
-                            </div>
-                            <button class="btn btn-success" type="submit">Login</button>
-                            <a class="btn btn-success" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        </form>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="form-control" type="email" type="email" name="email">
+                            <small class="form-text text-muted" id="emailHelp">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input class="form-control" type="password" type="password" name="password">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label" for="remember">Remember me</label>
+                        </div>
+                        <button class="btn btn-success" href="{{ route('login') }}" type="submit">{{ __('Login') }}</button>
+                        <a class="btn btn-success" href="{{ route('register') }}">{{ __('Register') }}</a>
                     </div>
                 </div>
                 @endif

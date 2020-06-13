@@ -16,7 +16,6 @@ class Post extends Model
         return asset('images/' . $value);
     }
 
-
     public function user(){
         return $this->belongsTo(User::class);
     }

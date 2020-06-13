@@ -43,9 +43,10 @@ class AdminsPostController extends Controller
             'post_image'=>'file',
             'body'=>'required'
         ]);
-        if(request()->hasFile('post_image')){
-            $inputs['post_image'] = time() . '.' . request()->post_image->extension();
-            request()->post_image->move(public_path('images'), $inputs['post_image']);
+        if ($file =  $request->file('post_image')) {
+         $inputs['post_image'] = $file->getClientOriginalName();
+         $file->move(public_path('images'), $inputs['post_image']);
+         $post->post_image = $inputs['post_image'];
         }
 
         auth()->user()->posts()->create($inputs);
