@@ -17,7 +17,7 @@ class Media extends Model
         'photo_two',
         'photo_three',
     ];
-/*
+
     public function getAboutImageAttribute($value){
         return asset('images/' . $value);
     }
@@ -33,5 +33,5 @@ class Media extends Model
     public function getPhotoThreeAttribute($value){
         return asset('images/' . $value);
     }
-    */
+
 }

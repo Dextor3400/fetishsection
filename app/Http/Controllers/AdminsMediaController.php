@@ -57,7 +57,7 @@ class AdminsMediaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Media $media)
-    {     
+    {
         return view('admin.media.edit',compact('media'));
     }
 
@@ -70,8 +70,6 @@ class AdminsMediaController extends Controller
      */
     public function update(Request $request, Media $media)
     {
-
-
         $inputs = request()->validate([
             'about_text'=>'required',
             'about_image'=>'file',
