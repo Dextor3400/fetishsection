@@ -5,11 +5,7 @@
             <section class="col-12 my-5">
                 <article class="row my-4 pb-4 text-center text-lg-left border-bottom border-light">
                     <div class="col-12 col-lg-6 col-xl-5">
-                        @if(!$post->post_image === null)
-                            <img src="{{ $post->post_image }}" alt="user-image" class="img-fluid" alt="post-image">
-                        @else
-                            <img src="https://picsum.photos/500/300" class="img-fluid" alt="post-image">
-                        @endif
+                        <img src="{{ $post->post_image }}" alt="user-image" class="img-fluid" alt="post-image">
                     </div>
                     <div class="col-12 col-lg-6 col-xl-7">
                         <small>{{ $post->created_at->diffForHumans() }}</small>
@@ -30,7 +26,7 @@
             @elseif(Session::has('reply_message'))
                 <div class="alert alert-success">{{ Session::get('reply_message') }}</div>
             @endif
-            <section class="col-12 col-lg-8 col-xl-10">
+            <section class="col-12 col-lg-10 col-xl-10">
                 <div class="row bootstrap snippets">
                     <div class="comment-wrapper">
                         <div class="panel panel-info">

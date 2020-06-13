@@ -11,11 +11,7 @@
             <article class="row my-4 pb-4 text-center text-lg-left d-flex align-items-center border-bottom border-light">
                 <div class="col-12 col-lg-6 col-xl-5">
                     <a href="{{ route('singlepost',$post) }}">
-                        @if(!$post->post_image === null)
-                            <img class="img-fluid" src="{{ $post->post_image }}" alt="post-image">
-                        @else
-                            <img src="https://picsum.photos/500/300" class="img-fluid" alt="post-image">
-                        @endif
+                        <img class="img-fluid" src="{{ $post->post_image }}" alt="post-image">
                     </a>
                 </div>
                 <div class="col-12 col-lg-6 col-xl-7">

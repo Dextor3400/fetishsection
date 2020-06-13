@@ -13,14 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@index')->name('home');
 
 Auth::routes();
-
-
-
 
 Route::get('/home', 'PagesController@index')->name('home');
 Route::get('/news', 'PagesController@news')->name('news');
