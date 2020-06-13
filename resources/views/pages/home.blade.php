@@ -80,9 +80,10 @@
                             <label class="form-check-label" for="remember">Remember me</label>
                         </div>
                         <form action="{{ route('login') }}" method="POST">
+                            @csrf
                             <button class="btn btn-success" href="{{ route('login') }}" type="submit">{{ __('Login') }}</button>
                         </form>
-                        <a class="btn btn-success" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        <a class="btn btn-success mt-2" href="{{ route('register') }}">{{ __('Register') }}</a>
                     </div>
                 </div>
                 @endif
